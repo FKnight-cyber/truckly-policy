@@ -2,7 +2,7 @@
 
 ## O que publicar
 
-Use o arquivo `docs/privacy-policy.html`.
+Use o arquivo `docs/index.html`.
 
 Antes de subir:
 
@@ -20,12 +20,23 @@ Uma pagina estatica na Cloudflare Pages resolve bem este requisito, desde que:
 
 Fluxo simples:
 
-1. Criar um repositorio ou pasta publica com `index.html`.
-2. Usar o conteudo de `docs/privacy-policy.html` como `index.html`.
-3. Publicar no Cloudflare Pages.
-4. Copiar a URL final, por exemplo:
+1. Conectar este repositorio no Cloudflare Pages.
+2. Configurar `Build command` como vazio.
+3. Configurar `Build output directory` como `docs`.
+4. Publicar o projeto.
+5. Copiar a URL final, por exemplo:
    `https://politica.truckly.pages.dev`
-5. Colar essa URL na Play Console.
+6. Colar essa URL na Play Console.
+
+## Como publicar com Wrangler
+
+Se voce preferir manter o deploy command como `npx wrangler deploy`, este repositorio ja inclui um `wrangler.toml` apontando para `docs/`.
+
+Configuracao:
+
+1. Use `Deploy command` = `npx wrangler deploy`.
+2. Nao precisa de build command.
+3. O Wrangler vai publicar os arquivos estaticos de `docs/`.
 
 ## Onde usar na Play Console
 
